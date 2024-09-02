@@ -6,7 +6,7 @@
 /*   By: apancar <apancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 07:27:50 by apancar           #+#    #+#             */
-/*   Updated: 2024/08/05 17:54:45 by apancar          ###   ########.fr       */
+/*   Updated: 2024/08/12 12:38:16 by apancar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 		
 void	Harl::debug(void)
 {
-	std::cout << "I love having extra bacon for my";
+	std::cout << "I love having extra bacon for my ";
 	std::cout << "7XL-double-cheese-triple-pickle-special-";
 	std::cout << "ketchup burger. I really do!" << std::endl;
 }
@@ -43,28 +43,35 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	// std::transform(level.begin(), level.end(), level.begin(), ::tolower);;;;
-	for (std::string::size_type i = 0; i < level.size(); ++i)
-	{
-    	level[i] = std::tolower(static_cast<unsigned char>(level[i]));
-	}
+	for (size_t i = 0; i < level.length(); i++)
+		level[i] = tolower(level[i]);
 	switch (level[0])
 	{
 		case ('d'):
+		{
 			debug();
-			break;
+			break ;
+		}
 		case ('i'):
+		{
 			info();
-			break;
-		case ('w'):
+			break ;
+		}
+		case ('w'): 
+		{
 			warning();
-			break;
+			break ;
+		}
 		case ('e'):
+		{
 			error();
-			break;
+			break ;
+		}
 		default :
+		{
 			std::cerr << "Invalid choice." << std::endl;
 			return ;
+		}
 	}
 
 }

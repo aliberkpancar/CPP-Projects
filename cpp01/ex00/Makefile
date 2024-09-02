@@ -6,11 +6,11 @@
 #    By: apancar <apancar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 07:54:02 by apancar           #+#    #+#              #
-#    Updated: 2024/08/03 11:29:12 by apancar          ###   ########.fr        #
+#    Updated: 2024/08/24 13:28:57 by apancar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRCS		= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp 
 
 OBJS		= ${SRCS:.cpp=.o}
 
