@@ -6,7 +6,7 @@
 /*   By: apancar <apancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 08:47:46 by apancar           #+#    #+#             */
-/*   Updated: 2024/09/02 13:57:39 by apancar          ###   ########.fr       */
+/*   Updated: 2024/09/02 15:55:16 by apancar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ class Bureaucrat
 		class GradeTooHighException;
 		class GradeTooLowException;
 };
+
+std::ostream& operator<<(std::ostream& out, Bureaucrat& bureaucrat);
 
 #endif

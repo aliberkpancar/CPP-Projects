@@ -6,7 +6,7 @@
 /*   By: apancar <apancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:03:24 by apancar           #+#    #+#             */
-/*   Updated: 2024/09/02 14:03:29 by apancar          ###   ########.fr       */
+/*   Updated: 2024/09/02 15:57:43 by apancar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,9 @@ void	Bureaucrat::increment_the_bureaucrat_grade()
 	this->_grade++;
 }
 
+std:ostream& operator<<(std::ostream& out, Bureaucrat& bureaucrat)
+{
+	out << bureaucrat.get_name() << ", bureaucrat grade " << bureaucrat.get_grade() << std::endl;
+	return (out);
+}
 
